@@ -1,0 +1,70 @@
+
+.container {
+    padding: 20px 20px;
+    max-width: 680px;
+    margin: 0 auto; 
+}
+
+
+.bookList {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,200px);
+    grid-auto-rows: minmax(250px, auto);
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.bookCard {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* a {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      transition: color 0.2s ease-in; 
+      display: block;  
+    }
+    &:hover {
+      a {
+        color:dimgray;
+      }
+    } */
+}
+
+.bookTitle {
+    font-size: 18px;
+    color: dimgray;
+    margin: 0;
+}
+
+.author {
+    margin: 0px;
+    padding: 0px;
+ 
+}
+
+.bookImage {
+    width: 160px;
+    height: 180px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    align-items: center;
+    /* hover {
+      transition: transform 500ms ease-in-out;
+      transform: scale(1.5);
+  
+    } */
+}
+
+.bookPurchaseBtn {
+    background-color: rgb(33, 31, 29);
+    color:rgb(215, 204, 215);
+    text-align: center;
+    font-size: 16px;
+    border: 0;
+    width: 110px;
+    height: 30px;
+    padding: 5px;
+}
