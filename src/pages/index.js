@@ -15,22 +15,12 @@ export default function Home({results}) {
         </div>
       ))}
        <style jsx>{`
-        /* .container {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          padding: 20px;
-          gap: 20px;
-        } 
-        .movie img {
-          max-width: 100%;
-          border-radius: 12px;
-          transition: transform 0.2s ease-in-out;
-          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        } */
+    
         h1:hover{
-          transform: scale(1) translateY(-10px);
-          color : rgb(43, 34, 43);
+          transform: scale(1.3) translateY(-5px);
+          color:rgb(215, 204, 215);
         }
+        
         h1{
           font-size: 18px;
           text-align: center;

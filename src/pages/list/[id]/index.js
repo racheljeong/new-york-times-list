@@ -5,23 +5,25 @@ import styles from "../../list.module.css";
 
 export default function Detail ({results}) {
     const router = useRouter();
-    console.log(`Detail`,router);
+    //console.log(`Detail`,router);
     console.log(`Detail`,results);
-
-    const name = router.query.id || "";
+    const name = results.display_name;
     
   
     return (
         <div className={`${styles.container}`}>
-            <h1>{name}</h1>
+            <h1 className={`${styles.name}`}>{name}</h1>
                 <div className={`${styles.bookList}`}>
                 {results?.books.map((book) => (
                 <div className={`${styles.bookCard}`} key={book.rank}>
-                    <img className={`${styles.bookImage}`} src={book.book_image} />
+                    {book.book_image ? 
+                        <img className={`${styles.bookImage}`} src={book.book_image}/>
+                        :
+                        <img className={`${styles.bookImage}`} src="/noImg.png"/> }
                     <h3 className={`${styles.bookTitle}`}>{book.rank}. {book.title}</h3>
                     <h4 className={`${styles.author}`}>{book.author}</h4>
                     <button className={`${styles.bookPurchaseBtn}`}>
-                        <Link href={`${book.amazon_product_url}`}>Buy Now!</Link>
+                        <Link className={`${styles.link}`} href={`${book.amazon_product_url}`}>Buy Now!</Link>
                     </button>
                 </div>
             ))}
